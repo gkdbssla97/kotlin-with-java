@@ -9,4 +9,11 @@
 - Null이 들어갈 수 있는 변수는 타입 뒤에 ?를 붙여주어야함
 - 객체 인스턴스화 시, new 키워드 안 붙여도 됨
 ---
-
+### Lec02:
+- Kotlin에서 null이 들어갈 수 있는 타입은 다르게 간주한다.
+  - null 검사 시, non-null임을 컴파일러가 인지한다.
+- null이 아닌 경우에만 호출되는 Safe Call(`?.`)이 있다.
+- null인 경우에만 호출되는 Elvis 연산자(`?:`)가 있다.
+- null이 절대 아닐 때 사용될 수 있는 Null 아님을 단언하는(`!!`)가 있다.
+- Kotlin에서 Java를 사용할 때 플랫폼 타입(null의 여부 판단 불가) 사용에 유의
+  - Java Source Code에서 Null 가능성을 확인해야 함 / Kotlin으로 Wrapping 
