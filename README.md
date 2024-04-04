@@ -16,4 +16,9 @@
 - null인 경우에만 호출되는 Elvis 연산자(`?:`)가 있다.
 - null이 절대 아닐 때 사용될 수 있는 Null 아님을 단언하는(`!!`)가 있다.
 - Kotlin에서 Java를 사용할 때 플랫폼 타입(null의 여부 판단 불가) 사용에 유의
-  - Java Source Code에서 Null 가능성을 확인해야 함 / Kotlin으로 Wrapping 
+  - Java Source Code에서 Null 가능성을 확인해야 함 / Kotlin으로 Wrapping
+
+### Lec04:
+- 비교 연산자 사용법은 Java랑 다 같다.
+  - 객체끼리도 자동 호출되는 compareTo를 이용하여 비교 연산자를 수행할 수 있다.
+- 객체끼리의 연산자를 직접 정의할 수 있다. 
