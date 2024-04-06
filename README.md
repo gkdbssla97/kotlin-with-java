@@ -17,8 +17,36 @@
 - null이 절대 아닐 때 사용될 수 있는 Null 아님을 단언하는(`!!`)가 있다.
 - Kotlin에서 Java를 사용할 때 플랫폼 타입(null의 여부 판단 불가) 사용에 유의
   - Java Source Code에서 Null 가능성을 확인해야 함 / Kotlin으로 Wrapping
-
+---
 ### Lec04:
 - 비교 연산자 사용법은 Java랑 다 같다.
   - 객체끼리도 자동 호출되는 compareTo를 이용하여 비교 연산자를 수행할 수 있다.
-- 객체끼리의 연산자를 직접 정의할 수 있다. 
+- 객체끼리의 연산자를 직접 정의할 수 있다.
+---
+### Lec05:
+- if / if-else 모두 Java와 문법이 동일
+- 단 Kotlin에서는 Statement가 아닌 Expression으로 취급된다.
+  - 때문에 Kotlin에서는 삼항연산자가 없다.
+- Switch는 when으로 대체되어 유연하게 사용 가능
+---
+### Lec07:
+- Kotlin에서 모든 예외는 Unchecked Exception이다.
+- try with resources 구문이 없다. Kotlin의 언어적 특성을 활용해 close를 호출한다.
+---
+### Lec08:
+- 함수의 문법은 Java와 다르다.
+  ```
+  접근제어자 fun 함수명(parameter): returnType {
+     ...
+  }
+  ```
+- 함수 파라미터에 기본 값을 설정해줄 수 있다.
+  > fun fun(str: String = "hi", age: Int = 10)
+- 가변인자에는 vararg 키워드를 사용하며, 가변인자 함수를 배열과 호출할 때는 `*`를 붙여주어야 한다.
+---
+### Lec09:
+- Kotlin에서는 필드를 만들면 getter와 setter가 자동으로 생성된다.
+  - 이를 프로퍼티라고 함
+- Kotlin에서는 주생성자가 필수이다.
+- Kotlin에서는 constructor 키워드를 사용해 부생성자를 추가로 만들 수 있다.
+  - 단, default parameter나 정적 팩토리 메소드를 추천한다.
