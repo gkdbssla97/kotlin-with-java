@@ -15,7 +15,7 @@ class Person(
     private var age: Int = 1
 ) {
 
-    val uppercaseName:String
+    val uppercaseName: String
         get() = this.name.uppercase()
 
 
