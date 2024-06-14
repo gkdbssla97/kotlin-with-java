@@ -61,3 +61,9 @@
 4. override: 상위 타입을 오버라이드 하고 있다.
 - 추상 멤버가 아니면 기본적으로 오버라이드가 불가능하다.
   - open을 사용해주어야 한다.
+---
+### Lec12:
+- Java의 static 변수와 함수를 만들려면, Kotlin에서는 companion object를 사용해야 한다.
+- companion object도 하나의 객체로 간주되므로 이름을 붙이고 다른 타입 상속 가능
+- Kotlin에서 Singleton 클래스를 만들 때 object 키워드 사용
+- Kotlin에서 익명 클래스를 만들 때 object : 타입 사용
