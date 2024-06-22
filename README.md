@@ -82,3 +82,19 @@
 > Kotlin의 일반 클래스는 컴파일 타임에 상속 계층을 안전하게 보장하지 않는다.<br> 컴파일 시점에 하위 클래스의 타입을 모두 기억하여 런타임 때 클래스 타입이 추가될 수 없다.
 > 1. 상속 제한: sealed 클래스는 같은 패키지 내에서만 상속할 수 있다. 모든 서브클래스는 HyundaiCar 클래스가 정의된 파일 내에 있다.
 > 2. 안전성 보장: 컴파일러가 서브클래스의 모든 인스턴스를 알 수 있으므로, when 표현식에서 모든 가능성을 처리하도록 강제할 수 있다.
+---
+### Lec15: Collections를 다루는 방법
+1. Kotlin에서는 컬렉션을 만들 때도 불변/가변을 지정해야한다.
+2. List, Set, Map에 대한 사용법이 변경, 확장되었다.
+3. **Java와 Kotlin 코드를 섞어 컬렉션을 사용할 때에는 주의해야한다.**
+   - Java에서 Kotlin 컬렉션을 가져갈 때는 불변 컬렉션을 수정할 수도 있고, `non-nullable` 컬렉션에 null을 넣을수도 있다.
+     - Kotlin 쪽에서 선제적으로 `Collections.unmodifableXXX()`를 활용하여 변경 자체를 막을 수 있다.
+   - Kotlin에서 Java 컬렉션을 가져갈 때는 플랫폼타입을 주의해야 한다.
+   > 1. Java에서 List<Integer>를 반환하였음.<br>
+   > 2. Kotlin에서는 `List<Int?>` `List<Int>?` `List<Int?>?`인지 식별이 안 됨.
+   > 3. 따라서, Java 코드의 맥락과 Java 코드를 가져오는 지점을 wrapping 해야함.
+
+- List<Int?> : 리스트에 null이 들어갈 수 있지만, 리스트는 절대 null이 아님<br>
+- List<Int>? : 리스트에 null이 들어갈 수 없지만, 리스트는 null일 수 있음<br>
+- List<Int?>? : 리스트에 null이 들어갈 수 있고, 리스트가 null일 수도 있음
+   
